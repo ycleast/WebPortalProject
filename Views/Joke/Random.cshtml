@@ -1,0 +1,66 @@
+@model WebPortal.Models.Joke
+@{
+    ViewData["Title"] = "Blague";
+    var jokeType = ViewBag.JokeType as string;
+}
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow">
+                <div class="card-header bg-warning text-dark text-center">
+                    <h3><i class="fas fa-laugh-squint"></i> 
+                        @if (!string.IsNullOrEmpty(jokeType))
+                        {
+                            <span>Blague @jokeType.ToUpper()</span>
+                        }
+                        else
+                        {
+                            <span>Blague Aléatoire</span>
+                        }
+                    </h3>
+                </div>
+                <div class="card-body text-center">
+                    <div class="joke-content">
+                        <h4 class="text-primary mb-4">@Model.Setup</h4>
+                        <div class="punchline-container">
+                            <button class="btn btn-outline-success btn-lg" onclick="showPunchline()">
+                                <i class="fas fa-eye"></i> Voir la Chute
+                            </button>
+                            <div id="punchline" class="mt-4" style="display: none;">
+                                <h5 class="text-success">@Model.Punchline</h5>
+                                <div class="mt-3">
+                                    <span class="badge bg-secondary">Type: @Model.Type</span>
+                                    <span class="badge bg-info">ID: @Model.Id</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer text-center">
+                    <div class="btn-group" role="group">
+                        <a href="@Url.Action("Index")" class="btn btn-secondary">
+                            <i class="fas fa-home"></i> Retour
+                        </a>
+                        <a href="@Url.Action("Random")" class="btn btn-primary">
+                            <i class="fas fa-redo"></i> Autre Blague
+                        </a>
+                        @if (!string.IsNullOrEmpty(jokeType))
+                        {
+                            <a href="@Url.Action("ByType", new { type = jokeType })" class="btn btn-warning">
+                                <i class="fas fa-repeat"></i> Même Type
+                            </a>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function showPunchline() {
+    document.getElementById('punchline').style.display = 'block';
+    event.target.style.display = 'none';
+}
+</script>

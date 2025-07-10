@@ -28,3 +28,4 @@
 /home/ycastel/WebPortalProject/WebPortal/obj/Debug/net8.0/WebPortal.pdb
 /home/ycastel/WebPortalProject/WebPortal/obj/Debug/net8.0/WebPortal.genruntimeconfig.cache
 /home/ycastel/WebPortalProject/WebPortal/obj/Debug/net8.0/ref/WebPortal.dll
+/home/ycastel/WebPortalProject/WebPortal/obj/Debug/net8.0/WebPortal.sourcelink.json

@@ -1,0 +1,58 @@
+@{
+    ViewData["Title"] = "Générateur de Blagues";
+    var jokeTypes = ViewBag.JokeTypes as List<string> ?? new List<string>();
+}
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow">
+                <div class="card-header bg-primary text-white text-center">
+                    <h2><i class="fas fa-laugh"></i> Générateur de Blagues</h2>
+                    <p class="mb-0">Choisissez votre type de blague préféré !</p>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <h5>Blague Aléatoire</h5>
+                            <p class="text-muted">Obtenez une blague complètement aléatoire</p>
+                            <a href="@Url.Action("Random")" class="btn btn-success btn-lg w-100">
+                                <i class="fas fa-random"></i> Blague Aléatoire
+                            </a>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <h5>Blague par Catégorie</h5>
+                            <p class="text-muted">Choisissez une catégorie spécifique</p>
+                            <form asp-action="GetJokeByType" method="post">
+                                <div class="mb-2">
+                                    <select name="selectedType" class="form-select" required>
+                                        <option value="">Choisir une catégorie...</option>
+                                        @foreach (var type in jokeTypes)
+                                        {
+                                            <option value="@type">@type.ToUpper()</option>
+                                        }
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100">
+                                    <i class="fas fa-search"></i> Obtenir une Blague
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <hr>
+                    
+                    <div class="text-center">
+                        <h5>Plusieurs Blagues</h5>
+                        <p class="text-muted">Obtenez plusieurs blagues d'un coup</p>
+                        <div class="btn-group" role="group">
+                            <a href="@Url.Action("Multiple", new { count = 3 })" class="btn btn-outline-primary">3 Blagues</a>
+                            <a href="@Url.Action("Multiple", new { count = 5 })" class="btn btn-outline-primary">5 Blagues</a>
+                            <a href="@Url.Action("Multiple", new { count = 10 })" class="btn btn-outline-primary">10 Blagues</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
