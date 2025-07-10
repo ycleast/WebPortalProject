@@ -11,6 +11,9 @@ builder.Services.AddHttpClient();
 // Enregistrement du service Joke
 builder.Services.AddScoped<IJokeService, JokeService>();
 
+// Ajout de la compression
+builder.Services.AddResponseCompression();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -22,6 +25,9 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
+
+// Utilisation de la compression
+app.UseResponseCompression();
 
 app.UseRouting();
 

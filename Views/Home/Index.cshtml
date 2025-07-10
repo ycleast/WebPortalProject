@@ -1,8 +1,47 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Bienvenue sur votre Portail Multifonctionnel";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="jumbotron text-center bg-light py-5">
+    <h1 class="display-4 text-primary">Bienvenue sur WebPortal !</h1>
+    <p class="lead">Votre plateforme unique pour des services web innovants.</p>
+    <hr class="my-4">
+    <p>Explorez nos fonctionnalités, y compris notre générateur de blagues hilarantes !</p>
+    <a class="btn btn-primary btn-lg" href="@Url.Action("Index", "Joke")" role="button">
+        <i class="fas fa-laugh-wink"></i> Découvrir les Blagues
+    </a>
+</div>
+
+<div class="container mt-5">
+    <div class="row text-center">
+        <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                    <i class="fas fa-lightbulb fa-4x text-warning mb-3"></i>
+                    <h5 class="card-title">Innovation</h5>
+                    <p class="card-text">Nous utilisons les dernières technologies pour vous offrir des services de
+                        pointe.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                    <i class="fas fa-cogs fa-4x text-info mb-3"></i>
+                    <h5 class="card-title">Modularité</h5>
+                    <p class="card-text">Une architecture propre et modulaire pour une évolutivité maximale.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                    <i class="fas fa-users fa-4x text-success mb-3"></i>
+                    <h5 class="card-title">Expérience Utilisateur</h5>
+                    <p class="card-text">Un design intuitif et responsive pour une utilisation agréable sur tous les
+                        appareils.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

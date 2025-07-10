@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "5B8h4JTC92nBKsQ+d7LfPcwphzwb2KgsaHo0at9AaRuvFyJMT76hjVMn+QwKdMfS2cehW/4Ie8rfvWDJ4qRU3w==",
+  "dgSpecHash": "qx29JcG3BL2pt2Ibgof3DNwHtQZUIkvfNMrglI1FC/RnTJ8OeL1p/lG0ofZm8Nlq6w+P/oKP61AiLrD7a++drA==",
   "success": true,
   "projectFilePath": "/home/ycastel/WebPortalProject/WebPortal/WebPortal.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/home/ycastel/.nuget/packages/microsoft.netcore.app.runtime.linux-x64/8.0.17/microsoft.netcore.app.runtime.linux-x64.8.0.17.nupkg.sha512",
+    "/home/ycastel/.nuget/packages/microsoft.aspnetcore.app.runtime.linux-x64/8.0.17/microsoft.aspnetcore.app.runtime.linux-x64.8.0.17.nupkg.sha512",
+    "/home/ycastel/.nuget/packages/microsoft.netcore.app.host.linux-x64/8.0.17/microsoft.netcore.app.host.linux-x64.8.0.17.nupkg.sha512"
+  ],
   "logs": []
 }

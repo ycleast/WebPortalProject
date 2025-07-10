@@ -4,10 +4,15 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="WebPortal - Votre plateforme multifonctionnelle avec générateur de blagues et services innovants" />
+    <meta name="keywords" content="blagues, humour, API, portail web, ASP.NET Core" />
+    <meta name="author" content="Votre Nom" />
     <title>@ViewData["Title"] - WebPortal</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/WebPortal.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
@@ -43,10 +48,10 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2025 - WebPortal - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
+    <footer class="border-top footer text-muted mt-5 py-3"></footer>
+    <div class="container text-center">
+        &copy; @DateTime.Now.Year - WebPortal - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
